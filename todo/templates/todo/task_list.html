@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>ToDO Tasks</h1>
+<a href="{%  url 'task_create'  %}">Add Task</a>
+<ul>
+    {% for task in tasks%}
+        <li>
+            {{task.title}}
+            <p>{{ task.completed}}</p>
+            <span>{% if task.completed %} (This is Completed) {% endif %}</span>
+            <button>Edit</button>
+            <button>Delete</button>
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
