@@ -161,6 +161,28 @@ table
 3. Many to Many : Rows in one table are linked multiple rows in another table
 , often managed using a join table 
 
+### ORM : Object Relational Mapping 
+this is a programming technique allowing us to interact with a relational db using 
+oop.
+Key usage 
+- replaces the need for writing raw SQL queries instead we use the objects to perform
+db operations , makes our code cleaner and more maintainable 
+
+Python Flask = SQLAlchemy ORM 
+Python Django = Django ORM 
+
+### Django ORM 
+Allows interaction with databases using python classes and methods rather than raw SQL. 
+Breakdown :
+1. Each model class represents a table in the database 
+2. Each instance/object of that class will represent a row in the table
+
+### Basic concepts of Django ORM 
+1. Model : a python class to represent the table 
+2. Querysets : A collection of db rows represented as objects which can be filtered
+ordered and manipulated 
+3. Migrations : A way to apply db schema changes i.e. creating tables 
+
 
 
 
