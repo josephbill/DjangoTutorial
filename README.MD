@@ -38,7 +38,7 @@ Frontend Framework
 - django recognizes above as an MVT pattern
   - Models : define the data. This is usually the database description and often the base layer to an app.
   - Views : url mapping logic
-  - Templates : HTML and CSS ,
+  - Templates : HTML and CSS , where to also interact with jinja templating. 
 
 
 
