@@ -183,6 +183,114 @@ Breakdown :
 ordered and manipulated 
 3. Migrations : A way to apply db schema changes i.e. creating tables 
 
+### APIS(Application Programming Interfaces)
+-Set of rules and tools that allow software applications to communicate with each other e.g. A django app can communicate 
+with an Android app. 
+- Defines how different software components should interact, enabling seamless data sharing and functionalities btw 
+the application
+
+### what is REST ? (Representational State Transfer)
+- this is an architectural style for designing APIs
+- REST relies on standard HTTP methods and focuses on making systems stateless and scalable 
+## Key features of REST 
+1. Stateless : Each request from a client contains all the info. needed to process it and the server does not 
+store any CLIENT state 
+2. HTTP methods : Common methods 
+- GET : Retrieve Data 
+- POST  :  Create the new data 
+- PUT/PATCH : Update data 
+- Delete : Delete Data 
+3. Resources : Everything is treated as a resource (e.g. users , products ) and each has a unique URL 
+4. Format : Typically uses JSON or XML for data exchange 
+
+
+### JSON (Javascript Object Notation)
+JSON is a lightweight data-interchange format. 
+Widely used in API for data exchange 
+
+JSON OBJECT -> 
+{
+  "key" : "value"
+}
+
+JSON ARRAY
+[
+{
+  "key" : "value"
+   },
+{
+  "key" : "value"
+},
+{
+  "key" : "value"
+}
+]
+
+
+### Approach to Developing APIS 
+1. Understand Requirements 
+- identify what the API needs to do.
+2. Designing the API 
+- REST way , GraphQL 
+- design the route and specify input/output
+- API versioning and documentation (SWAGGER ? POSTMAN)
+
+3. Build the API 
+- select the framework to use (DJANGO , EXPRESS IN JS ,FLASK )
+- Implement the endpoints '/tasks' '/task/<int:id>' usingt the HTTP methods
+- validations and if necessary implement authentication.
+
+4. Test the API 
+- test the api for performance , security, and proper data handling tools (POSTMAN)
+
+5. Deploy and maintain for live use. 
+
+### DJANGO APPROACH TO BUILDING THE APIS 
+1. Django REST Framework 
+- DRF is a powerful and flexible toolkit for building web apps in DJANGO 
+Steps 
+- Install DRF : pip install djangorestframework 
+- Define models for data 
+- Create serializers to convert btw JSON and model instances 
+- Define API Views and use DRF generic views for common patterns 
+- use routers to handle URL Routing 
+
+2. Using core DJANGO 
+- popular for simpler project
+- DJANGO built in JSONRESPONSE and your simple views for routing functionality
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

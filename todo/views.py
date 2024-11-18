@@ -9,6 +9,24 @@ def task_list(request):
     # all records in the db
     # rows : represent the object /columns
     tasks = Task.objects.all()
+    # return jSON format
+    '''
+      id, title , completed 
+      [
+      {
+        "id" : 1,
+        "title" : "Task 1",
+        "completed" : False
+      },
+      {
+        "id" : 2,
+        "title" : "Task 1",
+        "completed" : False
+      }
+      --------
+      
+      ]
+    '''
     return render(request,'todo/task_list.html',{'tasks':tasks})
 
 def task_create(request):
