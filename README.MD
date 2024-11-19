@@ -260,6 +260,63 @@ Steps
 - DJANGO built in JSONRESPONSE and your simple views for routing functionality
 
 
+### Steps for creation 
+1. Create and register the second app to our project
+python manage.py startapp todo_api
+2. Install DRF (djangorestframework)
+pip install djangorestframework
+3. Models : 
+- user : one to many relationship todos
+- tag : many to many relationship with todos 
+- tasks : data to define todos. 
+
+task : buy groceries 
+tag : urgent, personal 
+- A task can have multiple tags 
+- A tag can be associated to multiple tasks 
+
+tag : urgent 
+Buy Groceries , Pay bills 
+
+4. Make the migrations 
+python manage.py makemigrations
+python manage.py migrate
+
+5. Set up of serializers
+a. create a serializers.py file 
+
+6. Create the viewsets in view.py 
+7. Create the urls.py file for our app 
+8. Create the urls paths for the app 
+9. Register the apps urls to the project urls 
+10. Test : 
+using a tool like POSTMAN then run the project and test
+the endpoints. 
+- open settings, get to the marketplace , search and install postman~~~~
+
+### Serializers 
+-Serializers are used to convert model instances to simple python data types
+e.g. list , dictionary , which enables them to be easily rendered into 
+JSON 
+- Conversely, serializers also handle converting incoming data back into 
+django model instances for saving into database 
+Summary 
+a. Serialization : Converting python object i.e. model instance into JSON
+for API responses 
+b. deserialization : converting incoming python objects into model instances 
+for creating or updating records 
+
+
+### Types of serializers in DRF (DJANGO REST FRAMEWORK)
+1. ModelSerializer 
+- Class that acts a shortcut i.e. it auto. generates and validates fields 
+based on the model 
+2. Standard Serializer 
+- Used when we need more control over the serialization process 
+- Does not depend on the model for validation and generation , i.e. needs 
+explicit definations. 
+
+
 
 
 
