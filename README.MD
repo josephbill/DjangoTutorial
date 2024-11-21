@@ -285,7 +285,7 @@ python manage.py migrate
 5. Set up of serializers
 a. create a serializers.py file 
 
-6. Create the viewsets in view.py 
+6. Create the viewsets in view.py :: CRUD operations
 7. Create the urls.py file for our app 
 8. Create the urls paths for the app 
 9. Register the apps urls to the project urls 
@@ -316,9 +316,43 @@ based on the model
 - Does not depend on the model for validation and generation , i.e. needs 
 explicit definations. 
 
+### DJANGO AUTHENTICATION 
+Django comes with a ready user authentication system 
+1. Handle user accounts 
+2. Permissions for users 
+3. Cookie-based user sessions 
+
+Authentication and Authorization 
+The auth system consist of the following 
+1. User model 
+2. Permission flags : yes/no : user may perform a certain task 
+3. A configurable password hashing system
+4. Form and view tools for logging in users and restricting content 
+5. A pluggable backend system (customize what django does by default.)
+
+## installation 
+happens on creation of the django project 
+- django-admin startproject
+- "django.contrib.auth", : core of the authentication framework , default models (User)
+- "django.contrib.contenttypes", : linking to our own customization.
+
+## once you have extended the default auth model then :
+1. make the migrations ( python manage.py makemigrations )
+2. apply the migrations ( python manage.py migrate )
 
 
+### preventive measures 
+1. Define the custom user model early : let it be the first app we create 
+2. Run the migrations for above model first 
+3. Test migrations for this as we bring in our other applications 
 
+django.db.migrations.exceptions.InconsistentMigrationHistory: Migration admin.0001_initial is applied before its dependency accounts.0001_initial on database 'default'.
+
+Assessment 
+1. Create a new django project 
+2. Create the accounts app first : so that we avoid inconsitiencies btw the authentication layer django and our new customization. 
+3. Run the migrations and test app 
+4. Bring in the other apps. 
 
 
 
